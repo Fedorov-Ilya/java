@@ -1,8 +1,6 @@
 package com.example.Start;
 
 import com.google.gson.Gson;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,15 +12,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.concurrent.atomic.AtomicLong;
 
 
 @RestController
 public class GreetingController {
-
-    private static final Logger logger = LogManager.getLogger(GreetingController.class);
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
 
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
