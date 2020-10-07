@@ -23,6 +23,6 @@ public class GreetingController_2 {
     @ResponseStatus(HttpStatus.CREATED)
     public String create(@RequestBody(required = false) String body) throws Exception {
         System.out.println(body);
-        return rbody;
+        return body;
     }
 }
