@@ -1,12 +1,18 @@
-package com.example.Start;
+package webService.java.Controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
+
 
 @RestController
 public class EntityController {
@@ -16,17 +22,22 @@ public class EntityController {
     @Autowired
     private SpringTemplateEngine springTemplateEngine;
 
+    private static final Logger logger = LogManager.getLogger(EntityController.class);
+
     @PostMapping("/entity")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<String> create(@RequestBody(required = false) String body) throws Exception {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("Key1", "value1");
         httpHeaders.add("Key1", "value1");
-
+//        Thread.sleep(10000);
         Context context = new Context();
         String a = utils.getSubstring(body, "<Type>", "</Type>"); // использует метод utils и передает в него значения body,lb,rb
         context.setVariable("name", a); //изменяет в xml значение name на строку a
         String responseBody = springTemplateEngine.process("XML.xml", context); // отправляет все изменения обьекта context в файл XML.xml
+        logger.debug(body);
+        logger.debug(responseBody);
         return new ResponseEntity<String>(responseBody, httpHeaders, HttpStatus.OK); //200 - OK ,404 - NOT-FOUND , возвращает статус,тело и заголовки запроса
+
     }
 }

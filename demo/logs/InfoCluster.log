@@ -1,0 +1,13 @@
+2020-10-08 16:10:11.286  INFO %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
+2020-10-08 16:12:21.853 DEBUG %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Debug Message Logged !!!
+2020-10-08 16:12:21.855  INFO %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
+2020-10-08 16:13:16.409 DEBUG %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Debug Message Logged !!!
+2020-10-08 16:13:16.411  INFO %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
+2020-10-08 16:14:05.545 DEBUG %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Debug Message Logged !!!
+2020-10-08 16:14:05.547  INFO %DESKTOP-T2GPHOA -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
+${LOG_PATTERN}${LOG_PATTERN}2020-10-08 16:16:36.038 DEBUG -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Debug Message Logged !!!
+2020-10-08 16:16:36.040  INFO -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
+2020-10-08 16:16:56.866 DEBUG -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Debug Message Logged !!!
+2020-10-08 16:16:56.868  INFO -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
+2020-10-08 16:18:11.389 DEBUG -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Debug Message Logged !!!
+2020-10-08 16:18:11.390  INFO -- [           main] c.c.c.c.Log4j2HelloWorldExample          : Info Message Logged !!!
