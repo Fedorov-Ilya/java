@@ -4,18 +4,18 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class PropsReader {
     private long latency;
-    private int latencyInt;
+    private long latencyLong;
 
-    public PropsReader(@Value("${stub-latency}") long latency,@Value("${latencyInt}")int latencyInt){
+    public PropsReader(@Value("${stub_latency}") long latency,@Value("${stub_latencyLong}") long latencyLong){
         this.latency = latency;
-        this.latencyInt = latencyInt;
+        this.latencyLong = latencyLong;
     }
 
     public long getLatency() {
         return latency;
     }
 
-    public int getLatncyInt() {
-        return latencyInt;
+    public long getLatncyInt() {
+        return latencyLong;
     }
 }
